@@ -2,7 +2,7 @@
 
 日常工具助手是一款桌面效率工具，帮你管理**计划任务**和**定时提醒**，让日常工作生活更有条理。
 
-![应用主界面](docs/img/main-overview.png)
+![应用主界面](snapshot/main-overview.png)
 
 ---
 
@@ -11,10 +11,11 @@
 1. [快速开始](#1-快速开始)
 2. [计划管理](#2-计划管理)
 3. [提醒管理](#3-提醒管理)
-4. [通知弹窗](#4-通知弹窗)
-5. [设置](#5-设置)
-6. [更新日志](#6-更新日志)
-7. [常见问题](#7-常见问题)
+4. [条码管理](#4-条码管理)
+5. [通知弹窗](#5-通知弹窗)
+6. [设置](#6-设置)
+7. [更新日志](#7-更新日志)
+8. [常见问题](#8-常见问题)
 
 ---
 
@@ -34,25 +35,24 @@ https://github.com/zcrkey/tool-helper-updater/releases
 
 - 在主界面左下角点击"退出"按钮
 
-  ![退出按钮](docs/img/app-quit.png)
-
+  ![退出按钮](snapshot/app-quit.png)
 - 右键托盘图标选择"退出程序"
 
-  ![托盘图标](docs/img/tray-icon.png)
+  ![托盘图标](snapshot/tray-icon.png)
 
 ## 2. 计划管理
 
 计划页是管理日常待办事项的核心，分为**日历**和**列表**两种视图。
 
-![计划日历视图](docs/img/plan-page.png)
-![计划列表视图](docs/img/plan-page-list.png)
+![计划日历视图](snapshot/plan-page.png)
+![计划列表视图](snapshot/plan-page-list.png)
 
 ### 2.1 新建计划
 
 点击页面右上角的"新建计划"按钮，在弹出的抽屉中填写：
 
-![新建计划按钮](docs/img/plan-create-btn.png)
-![新建计划表单](docs/img/plan-create.png)
+![新建计划按钮](snapshot/plan-create-btn.png)
+![新建计划表单](snapshot/plan-create.png)
 
 - **标题** — 计划要做的事情
 - **描述** — 补充说明或备注
@@ -85,21 +85,21 @@ https://github.com/zcrkey/tool-helper-updater/releases
 
 在计划页顶部可以管理分类。你可以新增、重命名、排序或删除分类。每个计划只能归到一个分类下。
 
-![分类管理面板](docs/img/plan-category.png)
-![新建分类弹窗](docs/img/plan-category-create.png)
+![分类管理面板](snapshot/plan-category.png)
+![新建分类弹窗](snapshot/plan-category-create.png)
 
 ## 3. 提醒管理
 
 提醒是到时间自动弹窗通知你的事项。相比计划中的提醒，它更灵活，支持多种重复规则。
 
-![提醒页面](docs/img/reminder-page.png)
+![提醒页面](snapshot/reminder-page.png)
 
 ### 3.1 新建提醒
 
 点击"新建提醒"，在抽屉中填写：
 
-![新建提醒按钮](docs/img/reminder-create-btn.png)
-![新建提醒表单](docs/img/reminder-create.png)
+![新建提醒按钮](snapshot/reminder-create-btn.png)
+![新建提醒表单](snapshot/reminder-create.png)
 
 - **标题** — 提醒的内容
 - **启用状态** — 开启后到点才会触发，临时不需要可以"暂停"
@@ -121,10 +121,10 @@ https://github.com/zcrkey/tool-helper-updater/releases
 
 这是提醒弹窗的"脾气"——决定它怎么出现在你面前：
 
-| 模式         | 弹窗表现                              | 适合用来                   |
-| ------------ | ------------------------------------- | -------------------------- |
-| **短暂提醒** | 右下角出现，几秒后自动消失            | 一般提醒，看到就行         |
-| **常驻提醒** | 右下角出现，不消失直到你手动关        | 需要你确认的重要事项       |
+| 模式               | 弹窗表现                              | 适合用来             |
+| ------------------ | ------------------------------------- | -------------------- |
+| **短暂提醒** | 右下角出现，几秒后自动消失            | 一般提醒，看到就行   |
+| **常驻提醒** | 右下角出现，不消失直到你手动关        | 需要你确认的重要事项 |
 | **紧急提醒** | 右下角出现 + 自动把应用窗口弹到最前面 | 开会等必须立即响应的 |
 
 ### 3.4 列表操作
@@ -135,31 +135,111 @@ https://github.com/zcrkey/tool-helper-updater/releases
 - **启用/暂停** — 临时开关，不影响已设置的数据
 - **删除** — 彻底移除
 
-![提醒列表](docs/img/reminder-list-btn.png)
+![提醒列表](snapshot/reminder-list-btn.png)
 
 ---
 
-## 4. 通知弹窗
+## 4. 条码管理
+
+条码页用于离线生成和识别常用静态码，当前支持 **QR Code** 和 **Code 128**。所有内容、Logo 和图片都只在本地处理，不会上传到云端。
+
+![条码工作台](snapshot/barcode-page.png)
+
+条码管理分为两个模式：
+
+- **生成** — 输入内容后实时生成二维码或条形码，可调整样式并导出图片
+- **解码** — 上传、拖拽或粘贴图片，识别其中的二维码或条形码内容
+
+### 4.1 生成条码
+
+在"生成"模式中，左侧是内容输入和实时预览，右侧是参数面板。
+
+![条码生成](snapshot/barcode-page.png)
+
+生成 QR Code 时可以配置：
+
+- **码制** — 当前支持 QR Code 和 Code 128
+- **样式模板** — 选择基础黑白、简单标签、Logo 标识、圆点、圆角、渐变颜色等预设
+- **二维码尺寸** — 控制生成图片的实际尺寸
+- **边距** — 控制码图四周留白
+- **颜色样式** — 设置前景色、背景色、透明背景和渐变
+- **码点与码眼** — 设置码点形状、码眼外框、码眼中心和码眼颜色
+- **容错率** — 控制二维码被遮挡或污损后的识别能力
+- **Logo** — 上传本地 Logo，并设置形状、位置、投影和尺寸
+- **文字说明** — 在二维码下方显示自定义说明文字
+
+![二维码参数](snapshot/barcode-qrcode-settings.png)
+
+生成 Code 128 时可以配置：
+
+- **条宽** — 控制条码线条宽度
+- **条高** — 控制条码整体高度
+- **边距** — 控制条码四周留白
+- **显示文字** — 控制是否在条码下方显示原始内容
+- **文字大小** — 调整条码文字字号
+- **文字间距** — 调整文字和条码之间的距离
+
+![条形码参数](snapshot/barcode-code128-settings.png)
+
+实时预览区域支持：
+
+- **导出 PNG / JPG** — 将当前生成结果保存为图片
+- **复制图片** — 将当前生成结果复制到剪贴板
+- **保存记录** — 将当前内容、码制和样式配置保存到历史记录
+
+![条码预览操作](snapshot/barcode-preview-actions1.png)
+![条码预览操作](snapshot/barcode-preview-actions2.png)
+
+### 4.2 解码图片
+
+切换到"解码"模式后，可以识别本地图片中的二维码或条形码。
+
+![条码解码](snapshot/barcode-decode.png)
+
+支持三种图片输入方式：
+
+- **拖拽图片** — 将图片直接拖入上传区域
+- **选择图片** — 点击上传区域，从本地选择图片
+- **粘贴图片** — 从剪贴板读取图片并自动识别
+
+识别成功后，结果会显示在解码结果框中，可以一键复制结果内容。
+
+![解码结果](snapshot/barcode-decode-result.png)
+
+### 4.3 历史记录
+
+点击页面右上角的"历史记录"按钮，可以打开历史记录抽屉。
+
+![条码历史记录](snapshot/barcode-history.png)
+
+历史记录中可以：
+
+- **使用** — 将历史记录中的内容和样式配置回填到当前工作台
+- **删除** — 移除不再需要的历史记录
+
+历史记录适合保存常用设备码、活动码、资产编号、订单号等固定内容，后续可以快速复用。
+
+## 5. 通知弹窗
 
 提醒触发时，屏幕右下角会弹出一个通知窗口：
 
-![通知弹窗](docs/img/reminder-notifymode.png)
+![通知弹窗](snapshot/reminder-notifymode.png)
 
 弹窗的交互方式：
 
 | 操作                   | 效果                           |
 | ---------------------- | ------------------------------ |
 | 点击内容区域           | 跳转到对应的详情页查看完整信息 |
-| 点击右上角 ✕           | 关闭弹窗                       |
+| 点击右上角 ✕          | 关闭弹窗                       |
 | 什么都不做（短暂提醒） | 约 12 秒后自动消失             |
 
 提醒触发时，任务栏的应用图标也会闪烁，吸引你注意。
 
 ---
 
-## 5. 设置
+## 6. 设置
 
-### 5.1 外观
+### 6.1 外观
 
 三种主题可选：
 
@@ -167,19 +247,19 @@ https://github.com/zcrkey/tool-helper-updater/releases
 - **浅色模式** — 浅灰页面背景
 - **深色模式** — 深色背景，适合暗光环境
 
-![主题设置](docs/img/settings-theme.png)
+![主题设置](snapshot/settings-theme.png)
 
 切换即时生效，不需要重启。
 
-### 5.2 启动
+### 6.2 启动
 
 - **开机自动启动** — 开启后登录系统时会自动运行应用
 
-![数据管理](docs/img/settings-auto-launch.png)
+![数据管理](snapshot/settings-auto-launch.png)
 
-### 5.3 数据管理
+### 6.3 数据管理
 
-![数据管理](docs/img/settings-data.png)
+![数据管理](snapshot/settings-data.png)
 
 **导出数据：** 将你的所有计划、提醒等数据保存为一个 JSON 文件，可以存到安全位置。
 
@@ -200,9 +280,9 @@ https://github.com/zcrkey/tool-helper-updater/releases
 
 **清空本地数据：** 将你的所有计划、提醒等数据全部清空。
 
-### 5.4 版本更新
+### 6.4 版本更新
 
-![版本更新](docs/img/settings-update.png)
+![版本更新](snapshot/settings-update.png)
 
 - 启动时会自动检查有没有新版本
 - 也可以手动点击"检查更新"
@@ -210,11 +290,11 @@ https://github.com/zcrkey/tool-helper-updater/releases
 
 ---
 
-## 6. 更新日志
+## 7. 更新日志
 
 [点击查看更新日志](./CHANGELOG.md)
 
-## 7. 常见问题
+## 8. 常见问题
 
 **问：我关了窗口，但应用还在？**
 
