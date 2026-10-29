@@ -1,15 +1,41 @@
 {
   "name": "tool-helper-updater",
-  "version": "1.3.0",
-  "description": "日常工具助手是一款桌面效率工具，帮你管理**计划任务**和**定时提醒**和**条码管理**和**图片水印**，让日常工作生活更有条理。",
+  "version": "1.5.0",
+  "description": "日常工具助手（Tool Helper）：集成计划任务、定时提醒、条码生成识别、图片水印、PostgreSQL/MySQL 数据库客户端和 S3 兼容对象存储管理的桌面效率工具，支持主密码保护与本地数据备份。",
   "keywords": [
-    "工具助手",
+    "日常工具助手",
+    "桌面效率工具",
     "计划任务",
     "定时提醒",
     "条码生成",
-    "条码解码",
+    "条码识别",
     "图片水印",
-    "桌面效率"
+    "数据库客户端",
+    "对象存储",
+    "主密码",
+    "tool-helper",
+    "electron",
+    "productivity",
+    "task-planner",
+    "reminder",
+    "barcode",
+    "qrcode",
+    "code128",
+    "watermark",
+    "database-client",
+    "postgresql",
+    "mysql",
+    "sql-editor",
+    "s3",
+    "object-storage",
+    "minio",
+    "aws-s3",
+    "developer-tools"
   ],
-  "author": "zcr"
+  "author": "zcr",
+  "homepage": "https://github.com/zcrkey/tool-helper-updater",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zcrkey/tool-helper-updater.git"
+  }
 }
